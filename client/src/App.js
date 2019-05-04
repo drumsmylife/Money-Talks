@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.PNG";
+import logo from "./NewLogo.png";
 import "./App.css";
 import Login from "./Models/Login";
 import Navbar from "./Models/Navbar";
