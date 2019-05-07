@@ -7,9 +7,9 @@ const mongoose = require("mongoose");
 // Load Account and User models
 const Account = require("../../models/Account");
 const User = require("../../models/User");
-const PLAID_CLIENT_ID = "5ccb8e7f79118c001287ec8f";
-const PLAID_SECRET = "YOUR_SECRET";
-const PLAID_PUBLIC_KEY = "2a31b231f6c536b5cc20462b67fdc7";
+const PLAID_CLIENT_ID = "5cd0db8e91713000146af472";
+const PLAID_SECRET = "5469167660932ca053a4d3d5b3d02a";
+const PLAID_PUBLIC_KEY = "d91f183971b1a8d257dfcdcffe2cd3";
 const client = new plaid.Client(
   PLAID_CLIENT_ID,
   PLAID_SECRET,
