@@ -1,5 +1,5 @@
-const User = require('../models/User');
-const UserSession = require('../models/UserSession')
+const User = require('../../src/models/User');
+const UserSession = require('../../src/models/UserSession')
 
 module.exports = (app) => {
 
