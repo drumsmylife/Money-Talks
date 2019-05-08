@@ -39,10 +39,9 @@ router.post("/register", (req, res) => {
               .catch(err => console.log(err));
           });
         });
-      })
+      });
     });
-
-    // @route POST api/users/login
+// @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
 router.post("/login", (req, res) => {
@@ -91,5 +90,4 @@ router.post("/login", (req, res) => {
       });
     });
   });
-
   module.exports = router;
