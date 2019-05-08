@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import logo from "./NewLogo.png";
 import "./App.css";
-import Login from "./Models/Login";
-import Navbar from "./Models/Navbar";
-import Gif from "./Models/Gif";
-import Overview from "./Models/Overview";
+import Login from "./models/Login";
+import Navbar from "./models/Navbar";
+import Gif from "./models/Gif.js";
+import Overview from "./models/Overview";
 
 class App extends Component {
   render() {
