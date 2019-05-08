@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-const giphyAPI = "JXkpKRAmyWWfdABgWzYBU3qlPkzbVD2q";
+// const giphyAPI = "JXkpKRAmyWWfdABgWzYBU3qlPkzbVD2q";
 
 class Gif extends Component{
     // Api Request 
