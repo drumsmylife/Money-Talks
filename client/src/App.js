@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import Login from "./models/Login";
-import Navbar from "./models/Navbar";
-import Gif from "./models/Gif";
-import Overview from "./models/Overview";
+import Login from "./components/Login";
+import Navbar from "./components/Navbar";
+import Gif from "./components/Gif";
+import Overview from "./components/Overview";
 
 class App extends Component {
   render() {
