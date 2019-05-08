@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import logo from "./NewLogo.png";
 import "./App.css";
-import Login from "./Models/Login";
-import Navbar from "./Models/Navbar";
-import Overview from "./Models/Overview";
+import Login from "./models/Login";
+import Navbar from "./models/Navbar";
+import Gif from "./models/Gif";
+import Overview from "./models/Overview";
 
 class App extends Component {
   render() {
@@ -12,7 +12,9 @@ class App extends Component {
         <span><Navbar/></span>
         {/* <Login/> */}
         <Overview/>
+        <Login/>
         <br/><br/><br/>
+        <Gif/>
       </div>
     )
   }
