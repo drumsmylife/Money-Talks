@@ -6,10 +6,10 @@ class Gif extends Component{
     state = {gif: []};
     
     componentDidMount() {
-    this.GifResult();
+    this.gifResult();
     }
 
-    GifResult() {
+    gifResult() {
     $.getJSON("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" + giphyAPI + "&limit=1")
        .then(({ results }) => this.setState({ gif: results }));
     }   

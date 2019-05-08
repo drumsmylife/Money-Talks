@@ -3,7 +3,7 @@ import logo from "./NewLogo.png";
 import "./App.css";
 import Login from "./models/Login";
 import Navbar from "./models/Navbar";
-import Gif from "./models/Gif";
+import Gif from "./models/Gif.js";
 import Overview from "./models/Overview";
 
 class App extends Component {
