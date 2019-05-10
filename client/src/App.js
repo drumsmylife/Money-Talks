@@ -49,9 +49,12 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/Gif" component={Gif} />
-            <Route exact path="/Overview" component={Overview} />
-            <Route exact path="/Signup" component={Signup} />
+            <div className="container">
+        <Overview/>
+        <Signup/>
+        <br/><br/><br/>
+        <Gif/>
+      </div>
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
@@ -61,6 +64,9 @@ class App extends Component {
     );
   }
 }
+
+    
+
 export default App;
 
 
