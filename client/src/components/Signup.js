@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
 
-class Login extends Component{
+class Signup extends Component{
 
     render(){
         return(
             <div className="container">
                 <form>
+                    <div className="form-group">
+                        <label htmlFor="firstName">First Name</label>
+                        <input type="text" className="form-control" id="firstName" placeholder="Enter First Name"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="lastName">Last Name</label>
+                        <input type="text" className="form-control" id="lastName" placeholder="Enter Last Name"/>
+                    </div>
                     <div className="form-group">
                         <label htmlFor="emailInput">Email Address</label>
                         <input type="email" className="form-control" id="email" placeholder="Enter email"/>
@@ -22,4 +30,4 @@ class Login extends Component{
 
 }
 
-export default Login;
+export default Signup;
