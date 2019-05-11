@@ -5,6 +5,7 @@ module.exports = (app) => {
 
     app.post('/api/account/signup', (req, res, next) => {
         const {body} = req;
+        console.log('body', body)
         const {
             firstName,
             lastName,

@@ -18,6 +18,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Gif from "./components/Gif";
 import Overview from "./components/Overview";
 import Signup from "./components/Signup";
+import Home from "./components/Home";
 
 import "./App.css";
 // Check for token to keep user logged in
@@ -40,7 +41,9 @@ if (localStorage.jwtToken) {
   }
 }
 class App extends Component {
+
   render() {
+
     return (
       <Provider store={store}>
         <Router>
@@ -52,8 +55,8 @@ class App extends Component {
             <div className="container">
         <Overview/>
         <Signup/>
-        <br/><br/><br/>
-        <Gif/>
+        <Gif/> */}
+        <Home/>
       </div>
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
