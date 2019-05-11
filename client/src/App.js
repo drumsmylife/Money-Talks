@@ -5,17 +5,19 @@ import Navbar from "./components/Navbar";
 import Gif from "./components/Gif";
 import Overview from "./components/Overview";
 import Signup from "./components/Signup";
+import Home from "./components/Home";
 
 class App extends Component {
+
   render() {
     return(
       <div className="container">
-        <span><Navbar/></span>
-        <Login/>
+        <span><Navbar/></span><br/>
+        {/* <Login/>
         <Overview/>
         <Signup/>
-        <br/><br/><br/>
-        <Gif/>
+        <Gif/> */}
+        <Home/>
       </div>
     )
   }
