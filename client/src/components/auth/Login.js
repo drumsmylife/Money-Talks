@@ -12,7 +12,8 @@ class Login extends Component{
         this.state = {
             isLoading: true,
             signUpError: '',
-            signInError: ''
+            signInError: '',
+            errors: {}
         };
     }
 
