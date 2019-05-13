@@ -3,8 +3,14 @@ const giphyAPI = "JXkpKRAmyWWfdABgWzYBU3qlPkzbVD2q";
 const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${giphyAPI}&limit=1`;
 
 class Gif extends Component{
-    // Api Request 
-    // state = {gif: []};
+    constructor(props){
+        super(props);
+
+        this.state = {
+            items: [],
+            isLoaded: false
+        }
+    }
     
     componentDidMount() {
     this.fetchGifs();
@@ -16,21 +22,35 @@ class Gif extends Component{
     // }   
     fetchGifs(){
         fetch(giphyEndpoint)
-        .then(response => response.json())
-        .then(data => console.log("This is the giphy data", data));
+        .then(res => res.json())
+        .then(json => 
+            {
+            this.setState({
+                isLoaded: true,
+                items: json,
+            })
+        });
+        
     }
 
     render(){
-        return(
-            <div className="container">
-                <div className="row">
-                    <div className="gif-space">
-                        <h1>Gifs Go Here</h1>
+            return(
+                <div className="container">
+                    <div className="row">
+                        <div className="gif-space">
+                            {/* <ul>        
+                                {items.map(item => (
+                                    <li key = {item.id}>
+                                        {item.images.downsized.url}
+                                    </li>
+                                ))}
+                            </ul> */}
+                        </div>
                     </div>
                 </div>
-            </div>
-        )
-    }
+            )
+        }
+    
 }
 
 export default Gif;

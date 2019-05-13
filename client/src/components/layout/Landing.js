@@ -8,7 +8,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align">
             <h4>
-              <b>MoneyTalks!</b> Save that Money BRO!!!
+              <b>MoneyTalk$!</b> Save that Money BRO!!!
             </h4>
             <p className="flow-text grey-text text-darken-1">
              Don't even think about buying another drink idiot!

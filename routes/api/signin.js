@@ -1,9 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const mongoose = require("mongoose")
 const User = require('../../models/User');
 const UserSession = require('../../models/UserSession')
 
-module.exports = (app) => {
-
-    app.post('/api/account/signup', (req, res, next) => {
+    router.post('/api/account/signup', (req, res, next) => {
         const {body} = req;
         console.log('body', body)
         const {
@@ -86,7 +87,7 @@ module.exports = (app) => {
         });
     });
 
-    app.post('/api/account/signin', (req, res, next) => {
+    router.post('/api/account/signin', (req, res, next) => {
        const {body} = req;
        const {
            password
@@ -154,7 +155,7 @@ module.exports = (app) => {
        
     });
 
-    app.get('/api/account/verify', (req, res, next) => {
+    router.get('/api/account/verify', (req, res, next) => {
         const {query} = req;
         const {token} = query;
 
@@ -164,7 +165,7 @@ module.exports = (app) => {
         }, (err, sessions) => {
             if (err) {
                 return res.send({
-                    success: false.
+                    success: false,
                     message: 'Error: Invalid'
                 });
             } 
@@ -183,7 +184,7 @@ module.exports = (app) => {
         })
     });
 
-    app.get('/api/account/logout', (req, res, next) => {
+    router.get('/api/account/logout', (req, res, next) => {
        
         const { query } = req;
         const { token } = query;
@@ -209,4 +210,5 @@ module.exports = (app) => {
             });
         });
     });
-};
+
+module.exports = router
