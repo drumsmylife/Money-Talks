@@ -80,7 +80,7 @@ return (
             onClick={this.onLogoutClick}
             className="btn-flat waves-effect"
           >
-            <i className="material-icons left">keyboard_backspace</i> Log Out
+            <i className="material-icons left">←</i> Log Out
           </button>
           <h4>
             <b>Welcome!</b>
