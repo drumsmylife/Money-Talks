@@ -17,8 +17,6 @@ import Dashboard from "./components/dashboard/Dashboard";
 // import logo from "./components.NewLogo";
 import Gif from "./components/Gif";
 import Overview from "./components/Overview";
-import Signup from "./components/Signup";
-import Home from "./components/Home";
 
 import "./App.css";
 // Check for token to keep user logged in
@@ -55,7 +53,6 @@ class App extends Component {
             <div className="container">
               <Overview/>
               <Gif/>  
-              <Home/>
             </div>
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
