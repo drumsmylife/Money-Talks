@@ -54,7 +54,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <div className="container">
               <Overview/>
-              {/* <Gif/>   */}
+              <Gif/>  
               <Home/>
             </div>
             <Switch>
