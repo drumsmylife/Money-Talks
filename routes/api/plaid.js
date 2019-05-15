@@ -87,6 +87,39 @@ router.get(
         .catch(err => console.log(err));
     }
   );
+
+router.get(
+  "/accounts/transactions",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Account.find({ userId: req.user.id })
+      .then(function (accounts) {
+        console.log("accounts", accounts)
+        if (accounts) {
+          accounts.forEach(function (account) {
+            ACCESS_TOKEN = account.accessToken;
+            const institutionName = account.institutionName;
+            client.getTransactions(ACCESS_TOKEN, req.query.thirtyDaysAgo, req.query.today)
+              .then(response => {
+                let transactions = [];
+                transactions.push({
+                  accountName: institutionName,
+                  transactions: response.transactions
+                });
+                // console.log(accounts);
+                // Don't send back response till all transactions have been added
+                if (transactions.length === accounts.length) {
+                  res.json(transactions);
+                }
+              })
+              .catch(err => console.log(err));
+          });
+        }
+      })
+      .catch(err => console.log(err));
+    //console.log(req);
+  }
+);
   // @route POST api/plaid/accounts/transactions
 // @desc Fetch transactions from past 30 days from all linked accounts
 // @access Private
@@ -120,4 +153,15 @@ router.post(
       }
     }
   );
+
+router.post('/balance', (request, response, next) => {
+  client.getAccounts(ACCESS_TOKEN, (error, balanceResponse) => {
+    if (error != null) {
+      return response.json({
+        error: error,
+      });
+    }
+    response.json({ error: null, balance: balanceResponse });
+  });
+});
 module.exports = router;
