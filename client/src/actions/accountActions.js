@@ -5,7 +5,8 @@ import {
   GET_ACCOUNTS,
   ACCOUNTS_LOADING,
   GET_TRANSACTIONS,
-  TRANSACTIONS_LOADING
+  TRANSACTIONS_LOADING,
+  GET_BALANCE
 } from "./types";
 // Actions will go here
 // Add account
@@ -91,3 +92,22 @@ export const getTransactions = plaidData => dispatch => {
       type: TRANSACTIONS_LOADING
     };
   };      
+
+export const getBalance = () => dispatch => {
+  dispatch(getBalance());
+  axios
+    .get("/api/plaid/balance")
+    .then(res =>
+      dispatch({
+        type: GET_BALANCE,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_BALANCE,
+        payload: null
+      })
+    );
+};
+    
