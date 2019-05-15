@@ -9,6 +9,8 @@ import {
 } from "../../actions/accountActions";
 import { logoutUser } from "../../actions/authActions";
 import MaterialTable from "material-table"; // https://mbrn.github.io/material-table/#/
+import Gif from "../Gif";
+
 class Accounts extends Component {
   componentDidMount() {
     const { accounts } = this.props;
@@ -74,6 +76,8 @@ let transactionsData = [];
       });
     });
 return (
+    <div className="container">
+      
       <div className="row">
         <div className="col s12">
           <button
@@ -82,12 +86,15 @@ return (
           >
             <i className="material-icons left">←</i> Log Out
           </button>
+          <br/><br/>
           <h4>
             <b>Welcome!</b>
           </h4>
           <p className="grey-text text-darken-1">
             Hey there, {user.name.split(" ")[0]}
           </p>
+          <Gif/>
+          <br/><br/>
           <h5>
             <b>Linked Accounts</b>
           </h5>
@@ -138,6 +145,7 @@ return (
           )}
         </div>
       </div>
+    </div>
     );
   }
 }
