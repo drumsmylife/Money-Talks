@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Card from "./Card";
 const giphyAPI = "JXkpKRAmyWWfdABgWzYBU3qlPkzbVD2q";
 let giphySearchTerm = "stop";
 const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=${giphySearchTerm}&api_key=${giphyAPI}&limit=50`;
@@ -15,9 +16,9 @@ class Gif extends Component{
         }
     }
     
-    componentDidMount() {
-    this.fetchGifs();
-    }
+    // componentDidMount() {
+    // this.fetchGifs();
+    // }
 
     // gifResult() {
     // $.getJSON("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" + giphyAPI + "&limit=1")
@@ -43,9 +44,15 @@ class Gif extends Component{
         console.log(gifs)
             return(
                     <div className="row">
-                        <div className="gif-space">
-                            <h2>Food and Drinks: $5000 spent</h2>
-                            <img src={this.state.gifs}></img>
+                        <div className="col-md-6">
+                            <Card/><br/>
+                            <Card/><br/>
+                            <Card/><br/>
+                        </div>
+                        <div className="col-md-6">
+                            <Card/><br/>
+                            <Card/><br/>
+                            <Card/><br/>
                         </div>
                     </div>
             )
