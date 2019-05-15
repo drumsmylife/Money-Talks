@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 const giphyAPI = "JXkpKRAmyWWfdABgWzYBU3qlPkzbVD2q";
-const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${giphyAPI}&limit=5`;
+let giphySearchTerm = "stop";
+const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=${giphySearchTerm}&api_key=${giphyAPI}&limit=50`;
+let i = Math.floor(Math.random()*50);
+let catergory = "";
 
 class Gif extends Component{
     constructor(props){
@@ -24,11 +27,12 @@ class Gif extends Component{
         fetch(giphyEndpoint)
         .then(res => res.json())
         .then(gifs => {
-            console.log(gifs)
+            console.log(gifs.data[i].images.downsized.url)
             console.log(gifs.data.length)
+            
             this.setState({
                 isLoaded: true,
-                gifs: gifs,
+                gifs: gifs.data[i].images.downsized.url,
             })
         });
     }
@@ -36,20 +40,14 @@ class Gif extends Component{
 
     render(){
         let gifs = this.state.gifs
+        console.log(gifs)
             return(
-                <div className="container">
                     <div className="row">
                         <div className="gif-space">
-                            <ul>   
-                                {/* {gifs.map(gif => (
-                                    <li key = {gifs.id}>
-                                        {gifs}
-                                    </li> */}
-                                {/* ))} */}
-                            </ul>
+                            <h2>Food and Drinks: $5000 spent</h2>
+                            <img src={this.state.gifs}></img>
                         </div>
                     </div>
-                </div>
             )
         }
     

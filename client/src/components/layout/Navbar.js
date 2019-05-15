@@ -8,9 +8,11 @@ class Navbar extends Component{
         return (
             <nav className="navbar navbar-dark bg-dark">
                 <div className="row">
-                    <div className="col-md-4">
-                        <img src={logo} alt="Money Talk$" style={{height:150, width:150}}/>
+                    <div className="col-md-3"></div>
+                    <div className="col-md-6">
+                        <img src={logo} alt="Money Talk$" style={{height:100, width:110, align:"center"}}/>
                     </div>
+                    <div className="col-md-3"></div>
                 </div>
             </nav>
         );
