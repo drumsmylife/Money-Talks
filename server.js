@@ -29,7 +29,7 @@ mongoose
 
 //
   //Set up default mongoose connection
-  var mongoDB = 'mongodb://127.0.0.1/my_database';
+  var mongoDB =process.env.MONGODB_URI || 'mongodb://127.0.0.1/my_database';
   mongoose.connect(mongoDB, { useNewUrlParser: true });
 
   //Get the default connection
