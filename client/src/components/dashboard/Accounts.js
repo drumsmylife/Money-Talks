@@ -55,6 +55,8 @@ let accountItems = accounts.map(account => (
         <b>{account.institutionName}</b>
       </li>
     ));
+
+    //SOMEHOW NEED TO GET THE BALANCE TO SHOW LIKE TRANSACTIONS DID
 // Setting up data table
     const transactionsColumns = [
       { title: "Account", field: "account" },
