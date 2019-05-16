@@ -48,7 +48,7 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use("/api/plaid", plaid);
 
-app.get("*", (req, res) =>
+app.use((req, res) =>
  res.sendFile(path.join(__dirname, "../client/build/index.html"))
 );
 
