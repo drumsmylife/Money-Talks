@@ -15,7 +15,7 @@ app.use(
 app.use(bodyParser.json());
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use('/static', express.static(path.join(__dirname, 'client/build')));
  }
 
 // DB Config
