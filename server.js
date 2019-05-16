@@ -49,7 +49,7 @@ app.use("/api/users", users);
 app.use("/api/plaid", plaid);
 
 app.use((req, res) =>
- res.sendFile(path.join(__dirname, "../client/build/index.html"))
+ res.sendFile(path.join(__dirname, "build/index.html"))
 );
 
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
