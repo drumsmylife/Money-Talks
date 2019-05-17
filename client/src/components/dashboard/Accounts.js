@@ -9,7 +9,7 @@ import {
 } from "../../actions/accountActions";
 import { logoutUser } from "../../actions/authActions";
 import MaterialTable from "material-table"; // https://mbrn.github.io/material-table/#/
-import Gif from "../Gif";
+import Card from "../Card";
 
 class Accounts extends Component {
   componentDidMount() {
@@ -66,16 +66,74 @@ let accountItems = accounts.map(account => (
       { title: "Category", field: "category" }
     ];
 
-    let transactionsTravel = [];
+    function round(value, precision) {
+      var multiplier = Math.pow(10, precision || 0);
+      return Math.round(value * multiplier) / multiplier;
+  }
+
+  let category = "";
+
+    let transactionsTravel = 0.00;
     transactions.forEach(function(account) {
       account.transactions.forEach(function(transaction) {
-        if(transaction.category[0] === 'Travel')
-        transactionsTravel.push({
-          amount: transaction.amount
-        });
-        console.log(transactionsTravel);
+        if(transaction.category[0] === 'Travel'){
+        transactionsTravel = round(transactionsTravel+transaction.amount, 2);
+        };
+      });
+    });      
+        console.log("This is Travel:", transactionsTravel);
+
+    let transactionsFoodandDrink = 0.00;
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Food and Drink'){
+          transactionsFoodandDrink = round(transactionsFoodandDrink+transaction.amount, 2);
+          };
       });
     });
+    console.log("This is Food and Drinks:", transactionsFoodandDrink);
+
+    let transactionsPayment = 0.00;
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Payment'){
+          transactionsPayment = round(transactionsPayment+transaction.amount, 2);
+          };
+      });
+    });
+    console.log("This is payment:", transactionsPayment);
+
+    let transactionsShops = 0.00;
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Shops'){
+          transactionsShops = round(transactionsShops+transaction.amount, 2);
+          };
+      });
+    });
+    console.log("This is Shops:",transactionsShops);
+
+    let transactionsTransfer = 0.00;
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Transfer'){
+          transactionsTransfer = round(transactionsTransfer+transaction.amount, 2);
+          };
+        
+      });
+    });
+    console.log("This is Transfer",transactionsTransfer);
+
+    let transactionsRecreation = 0.00;
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Recreation'){
+          transactionsRecreation = round(transactionsRecreation+transaction.amount, 2);
+        };
+      });
+    });
+    console.log("This is Recreation:", transactionsRecreation);
+
 let transactionsData = [];
     transactions.forEach(function(account) {
       account.transactions.forEach(function(transaction) {
@@ -106,8 +164,7 @@ return (
           <p className="grey-text text-darken-1">
             Hey there, {user.name.split(" ")[0]}
           </p>
-          <Gif/>
-          <br/><br/>
+          
           <h5>
             <b>Linked Accounts</b>
           </h5>
@@ -132,6 +189,8 @@ return (
             Add Account
           </PlaidLinkButton>
           <hr style={{ marginTop: "2rem", opacity: ".2" }} />
+          <Card category="Travel"/>
+          <br/><br/>
           <h5>
             <b>Transactions</b>
           </h5>
