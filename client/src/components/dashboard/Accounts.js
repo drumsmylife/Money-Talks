@@ -65,6 +65,17 @@ let accountItems = accounts.map(account => (
       { title: "Amount", field: "amount" },
       { title: "Category", field: "category" }
     ];
+
+    let transactionsTravel = [];
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Travel')
+        transactionsTravel.push({
+          amount: transaction.amount
+        });
+        console.log(transactionsTravel);
+      });
+    });
 let transactionsData = [];
     transactions.forEach(function(account) {
       account.transactions.forEach(function(transaction) {
