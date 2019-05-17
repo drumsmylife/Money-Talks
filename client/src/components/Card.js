@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 const giphyAPI = "JXkpKRAmyWWfdABgWzYBU3qlPkzbVD2q";
-let giphySearchTerm = "stop";
-const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=${giphySearchTerm}&api_key=${giphyAPI}&limit=50`;
+// let giphySearchTerm = "test";
+// const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=${giphySearchTerm}&api_key=${giphyAPI}&limit=50`;
 let i = Math.floor(Math.random()*50);
+// let total = this.props.total;
 
 class Card extends Component{
     constructor(props){
@@ -13,13 +14,38 @@ class Card extends Component{
             isLoaded: false
         }
     }
-    
+    // Checks total from acounts.js and returns search term
+    checkTotal(total){
+        if (total <= 500){
+            let giphySearchTerm = "Awesome"
+            console.log("less than 500", giphySearchTerm)
+            return giphySearchTerm
+            
+        }
+        else if (500<= total <= 1500){
+            let giphySearchTerm = "Not+Bad"
+            return giphySearchTerm
+        }
+        else if (1500<= total <=5000){
+            let giphySearchTerm = "Slow+Down+Idiot"
+            return giphySearchTerm
+        }
+        else{
+            let giphySearchTerm = "STOP!"
+            return giphySearchTerm
+        }
+    }
+
+
     componentDidMount() {
     this.fetchGifs();
     }
 
    
     fetchGifs(){
+        
+        var giphySearchTerm = this.checkTotal(total)
+        const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=${giphySearchTerm}&api_key=${giphyAPI}&limit=50`;
         fetch(giphyEndpoint)
         .then(res => res.json())
         .then(gifs => {
@@ -41,8 +67,8 @@ class Card extends Component{
                 <div className="card" style={{width: "18rem"}}>
                     <img src={this.state.gifs} className="card-img-top" alt="Gif" />
                     <div className="card-body">
-                        <h4>Category: </h4>
-                        <h5>Total Spent: $</h5>
+                        <h4>Category: {this.props.category}</h4>
+                        <h5>Total Spent: $ {this.props.total}</h5>
                     </div>
                 </div>
             </div>

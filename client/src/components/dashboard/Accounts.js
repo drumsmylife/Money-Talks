@@ -71,7 +71,7 @@ let accountItems = accounts.map(account => (
       return Math.round(value * multiplier) / multiplier;
   }
 
-  let category = "";
+  // let category = "";
 
     let transactionsTravel = 0.00;
     transactions.forEach(function(account) {
@@ -189,7 +189,18 @@ return (
             Add Account
           </PlaidLinkButton>
           <hr style={{ marginTop: "2rem", opacity: ".2" }} />
-          <Card category="Travel"/>
+          <div className="row">
+            <div className="col-md-6">
+              <Card total={transactionsRecreation} category={"Recreation"}/>
+              <Card total={transactionsTravel} category={"Travel"}/>
+              <Card total={transactionsTransfer} category={"Transfer"}/>
+            </div>
+            <div className="col-md-6">
+              <Card total={transactionsPayment} category={"Payment"}/>
+              <Card total={transactionsShops} category={"Shops"}/>
+              <Card total={transactionsFoodandDrink} category={"Food and Drink"}/>
+            </div>
+          </div>
           <br/><br/>
           <h5>
             <b>Transactions</b>
