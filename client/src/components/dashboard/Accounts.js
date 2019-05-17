@@ -73,9 +73,71 @@ let accountItems = accounts.map(account => (
         transactionsTravel.push({
           amount: transaction.amount
         });
-        console.log(transactionsTravel);
+        
+      });      
+    });
+    console.log("This is Travel:", transactionsTravel);
+
+    let transactionsFoodandDrink = [];
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Food and Drink')
+        transactionsFoodandDrink.push({
+          amount: transaction.amount
+        });
+        
       });
     });
+    console.log("This is Food and Drinks:", transactionsFoodandDrink);
+
+    let transactionsPayment = [];
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Payment')
+        transactionsPayment.push({
+          amount: transaction.amount
+        });
+        
+      });
+    });
+    console.log("This is payment:", transactionsPayment);
+
+    let transactionsShops = [];
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Shops')
+        transactionsShops.push({
+          amount: transaction.amount
+        });
+        
+      });
+    });
+    console.log("This is Shops:",transactionsShops);
+
+    let transactionsTransfer = [];
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Transfer')
+        transactionsTransfer.push({
+          amount: transaction.amount
+        });
+        
+      });
+    });
+    console.log("This is Transfer",transactionsTransfer);
+
+    let transactionsRecreation = [];
+    transactions.forEach(function(account) {
+      account.transactions.forEach(function(transaction) {
+        if(transaction.category[0] === 'Recreation')
+        transactionsRecreation.push({
+          amount: transaction.amount
+        });
+        
+      });
+    });
+    console.log("This is Recreation:", transactionsRecreation);
+
 let transactionsData = [];
     transactions.forEach(function(account) {
       account.transactions.forEach(function(transaction) {
