@@ -15,7 +15,6 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 
 // import logo from "./components.NewLogo";
-import Gif from "./components/Gif";
 import Overview from "./components/Overview";
 
 import "./App.css";

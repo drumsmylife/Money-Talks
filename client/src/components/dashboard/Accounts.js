@@ -10,12 +10,47 @@ import {
 import { logoutUser } from "../../actions/authActions";
 import MaterialTable from "material-table"; // https://mbrn.github.io/material-table/#/
 import Card from "../Card";
+let i = Math.floor(Math.random()*50);
+const giphyAPI = "JXkpKRAmyWWfdABgWzYBU3qlPkzbVD2q";
+let giphySearchTerm = "watch+your+money";
 
 class Accounts extends Component {
   componentDidMount() {
     const { accounts } = this.props;
     this.props.getTransactions(accounts);
+    this.fetchGifs();
   }
+
+  
+    
+  
+
+   
+    fetchGifs(){
+        
+        
+        const giphyEndpoint = `http://api.giphy.com/v1/gifs/search?q=${giphySearchTerm}&api_key=${giphyAPI}&limit=50`;
+        fetch(giphyEndpoint)
+        .then(res => res.json())
+        .then(gifs => {
+            console.log(gifs.data[i].images.downsized.url)
+            console.log(gifs.data.length)
+            
+            this.setState({
+                isLoaded: true,
+                gifs: gifs.data[i].images.downsized.url,
+            })
+        });
+    }
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+        gifs: [],
+        isLoaded: false
+    }
+  }  
 // Add account
   handleOnSuccess = (token, metadata) => {
     const { accounts } = this.props;
@@ -189,6 +224,10 @@ return (
             Add Account
           </PlaidLinkButton>
           <hr style={{ marginTop: "2rem", opacity: ".2" }} />
+          <div className="row" >
+            <img src={this.state.gifs} alt="gif" style={{ margin:"auto"}}/>
+          </div>
+
           <div className="row">
             <div className="col-md-6">
               <Card total={transactionsRecreation} category={"Recreation"}/>
