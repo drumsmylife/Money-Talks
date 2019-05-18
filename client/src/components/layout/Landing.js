@@ -23,13 +23,12 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align">
             <h4>
-              <b>MoneyTalk$!</b> Save that Money BRO!!!
+             The Budget App For Millenials <br></br>
+             Sign In And Save That Money Bruh!
             </h4>
-            <p className="flow-text grey-text text-darken-1">
-             Don't even think about buying another drink idiot!
-            </p>
+           
             <br />
-            <div className="col s6">
+            <div className="col s6 register">
               <Link
                 to="/register"
                 style={{
@@ -37,7 +36,7 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                className="btn btn-large waves-effect waves-light hoverable black accent-3"
               >
                 Register
               </Link>
@@ -50,7 +49,7 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large btn-flat waves-effect white black-text"
+                className="btn btn-large btn-flat waves-effect black white-text"
               >
                 Log In
               </Link>

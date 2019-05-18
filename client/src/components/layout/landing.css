@@ -1,7 +1,7 @@
 body{
     background-image: url(../money.jpg);
-
-}
+    
+  }
 body {
     display: flex;
     min-height: 100vh;
@@ -12,3 +12,14 @@ body {
     flex: 1 0 auto;
   }
       
+  h4{
+    background-color: white;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Alfa Slab One';
+    
+  }
+
+  .register{
+    
+  }
