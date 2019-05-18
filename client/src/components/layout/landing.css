@@ -44,4 +44,12 @@ body {
   .register-button {
     background: white;
     opacity: 0.85; 
+    margin-top: 20px
+  }
+  
+  .app-greet {
+    background: white;
+    opacity: .95;
+    padding-top: 30px;
+    margin-right: 20px;
   }

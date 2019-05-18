@@ -188,22 +188,24 @@ return (
         <div className="col s12">
           <button
             onClick={this.onLogoutClick}
-            className="btn-flat waves-effect"
+            className="btn-flat waves-effect black"
           >
             <i className="material-icons left">←</i> Log Out
           </button>
           <br/><br/>
+
+          <div className="col s12 app-greet">
           <h4>
             <b>Welcome!</b>
           </h4>
-          <p className="grey-text text-darken-1">
+          <p className="black-text text-darken-1">
             Hey there, {user.name.split(" ")[0]}
           </p>
           
           <h5>
             <b>Linked Accounts</b>
           </h5>
-          <p className="grey-text text-darken-1">
+          <p className="black-text text-darken-1">
             Add or remove your bank accounts below
           </p>
           <ul>{accountItems}</ul>
@@ -227,7 +229,7 @@ return (
           <div className="row" >
             <img src={this.state.gifs} alt="gif" style={{ margin:"auto"}}/>
           </div>
-
+          
           <div className="row">
             <div className="col-md-6">
               <Card total={transactionsRecreation} category={"Recreation"}/>
@@ -265,6 +267,7 @@ return (
               />
             </>
           )}
+        </div>
         </div>
       </div>
     </div>
