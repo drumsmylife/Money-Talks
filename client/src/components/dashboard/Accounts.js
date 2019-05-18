@@ -231,12 +231,12 @@ return (
           </div>
           
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-5">
               <Card total={transactionsRecreation} category={"Recreation"}/>
               <Card total={transactionsTravel} category={"Travel"}/>
               <Card total={transactionsTransfer} category={"Transfer"}/>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-5">
               <Card total={transactionsPayment} category={"Payment"}/>
               <Card total={transactionsShops} category={"Shops"}/>
               <Card total={transactionsFoodandDrink} category={"Food and Drink"}/>
