@@ -1,29 +1,11 @@
-# Create React Express App
+Welcome to Money Talk$
+The Budgeting app for Millenials!
 
-## About This Boilerplate
+Register with your e-mail and you will then have the ability to link your bank account.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+Money Talk$ works with all major online bank accounts. 
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+Once your bank account is linked, Money Talk$ will let you know if you are spending too much or if your finances are 
+just right!
 
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-yarn install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+Its that easy!
