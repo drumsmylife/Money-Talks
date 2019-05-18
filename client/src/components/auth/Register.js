@@ -53,14 +53,14 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
+      <div className="container top-buffer">
         <div className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">←</i> Back to
               home
             </Link>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+            <div className="col s12 register-button" style={{ paddingLeft: "11.250px" }}>
               <h4>
                 <b>Register</b> below
               </h4>

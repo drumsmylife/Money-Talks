@@ -182,7 +182,7 @@ let transactionsData = [];
       });
     });
 return (
-    <div className="container">
+    <div className="container top-buffer">
       
       <div className="row">
         <div className="col s12">

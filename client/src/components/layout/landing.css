@@ -12,14 +12,36 @@ body {
     flex: 1 0 auto;
   }
       
-  h4{
+  .tagline{
     background-color: white;
     padding: 20px;
     font-weight: bold;
     font-family: 'Alfa Slab One';
+    opacity: 0.85;
     
   }
 
-  .register{
+  .top-buffer{ 
+    margin-top: 200px;
     
+  }
+  .welcome{
+    align-content: center;
+    background: white;
+  }
+
+  .login-button{
+
+  background: white;
+  margin-top: 20px;
+  opacity: 0.85;
+  }
+  .input-field {
+    background: white;
+    opacity: 0.85;
+  }
+
+  .register-button {
+    background: white;
+    opacity: 0.85; 
   }
