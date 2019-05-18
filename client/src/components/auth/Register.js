@@ -56,7 +56,7 @@ class Register extends Component {
       <div className="container top-buffer">
         <div className="row">
           <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
+            <Link to="/" className="btn-flat waves-effect black">
               <i className="material-icons left">←</i> Back to
               home
             </Link>
