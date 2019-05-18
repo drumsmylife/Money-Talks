@@ -11,7 +11,7 @@ class Navbar extends Component{
                 <div className="row">
                     
                     <div className="col-md-6 logo">
-                        <img src={logo} alt="Money Talk$" style={{height:250, width:275,}}/>
+                        <img src={logo} alt="Money Talk$" style={{height:150, width:175, display:"inline"}}/>
                     </div>
                     
                 </div>

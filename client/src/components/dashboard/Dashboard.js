@@ -34,12 +34,14 @@ if (accounts === null || accountsLoading) {
     } else {
       // User has no accounts linked
       dashboardContent = (
+        
         <div className="row">
+          
           <div className="col s12 center-align">
             <h4>
               <b>Welcome,</b> {user.name.split(" ")[0]}
             </h4>
-            <p className="flow-text grey-text text-darken-1">
+            <p className="flow-text grey-text text-darken-1" style={{background: "white", opacity:.75, width: 600, margin:"auto"}}>
               To get started, link your first bank account below
             </p>
             <div>
