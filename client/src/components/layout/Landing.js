@@ -22,7 +22,7 @@ class Landing extends Component {
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            <h4>
+            <h4 className="tagline">
              The Budget App For Millenials <br></br>
              Sign In And Save That Money Bruh!
             </h4>

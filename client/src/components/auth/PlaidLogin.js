@@ -54,14 +54,14 @@ class Login extends Component{
     render() {
       const { errors } = this.state;  
         return (
-            <div className="container">
+            <div className="container top-buffer">
               <div style={{ marginTop: "4rem" }} className="row">
                 <div className="col s8 offset-s2">
-                  <Link to="/" className="btn-flat waves-effect">
+                  <Link to="/" className="btn-flat waves-effect black">
                     <i className="material-icons left">←</i> Back to
                     home
                   </Link>
-                  <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+                  <div className="col s12 login-button" style={{ paddingLeft: "11.250px" }}>
                     <h4>
                       <b>Login</b> below
                     </h4>
