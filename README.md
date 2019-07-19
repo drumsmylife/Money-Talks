@@ -18,4 +18,27 @@ Its that easy!
 
 3. This is just a practice app. Do not put your actual bank info in
 
-4. Username is user_good and password is pass_good
+4. Create a login account and choose what bank you want to use.
+
+5.  Username is user_good and password is pass_good
+
+# Tech Used
+
+1. HTML
+
+2. Javascript
+
+3. ReactJS
+
+4. CSS
+
+5. Bootstrap
+
+6. Plaid API
+
+7. Passport
+
+8. Mongoose
+
+9. MongoDB
+
