@@ -22,6 +22,8 @@ Its that easy!
 
 5.  Username is user_good and password is pass_good
 
+6. YOU NEED TO INSTALL THE CHROME EXTENSION IN ORDER TO USE THIS APP https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+
 # Tech Used
 
 1. HTML
